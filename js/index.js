@@ -18,10 +18,9 @@ search.addEventListener("submit", async function(event){
     
     const option = document.createElement("option");
     option.innerText = input.value;
-    ;
     if (response.login == input.value){
         input.value = "";
-        history.append(option)
+        history.append(option);
     }
 });
 
@@ -33,6 +32,23 @@ function updateUserInfo(response) {
     img.src = response.avatar_url;
 }
 
+document.addEventListener("DOMContentLoaded", async function (x){
+    const url = "https://api.github.com/repos/facebook/create-react-app/issues";
+    const response = await get(url);
+    const issue = document.querySelector("#issue");
+    
+    console.log(response);
+    const arr = [];
+    response.map(function (x){
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.innerText = x.title;
+        details.innerText = x.body;
+        issue.append(details);
+        details.append(summary);
+        console.log(x.title);
+    });
+})
 
 // const history = document.getElementById(history);
 // history.addEventListener("change", async function (char) {
