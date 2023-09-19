@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Title</title>
-    <link rel='stylesheet' href='./css/styles.css'/>
-    <link rel='normalize' href='./css/normalize.css'/>
+    <title>GH-Fetch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel='stylesheet' href='./css/styles.css' />
+    <link rel='normalize' href='./css/normalize.css' />
 </head>
+
 <body>
     <header>
-        
+        <h1>Github Fetch</h1>
+        <form id="search">
+            <div class="control">
+                <input class="input is-large is-rounded" type="text" placeholder="username">
+            </div>
+            <select id="history">
+                <option>History</option>
+            </select>
+        </form>
     </header>
     <main>
-        
+        <div class="card">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4" id="name">Name</p>
+                        <p class="subtitle is-6" id="userName">Username</p>
+                    </div>
+                </div>
+                <div class="content" id="location">
+                    Location
+                </div>
+                <div class="content" id="about">
+                    Bio
+                </div>
+            </div>
+        </div>
     </main>
     <footeer>
-        
-    </footer>
+
+        </footer>
 </body>
 <script src='./js/index.js'></script>
+<script src='./js/get.js'></script>
 </html>
